@@ -11,6 +11,7 @@
     } meta_data_t;
 
     typedef enum eth_type_e {
+        NONE = 0,
         IPV4 = 0x800,
         IPV6 = 0x806,
         ARP = 0x86DD
@@ -19,8 +20,7 @@
 void print_mac_addr(uint8_t mac_addr[MAC_ADDR_SIZE]);
 // char *mac_addr_str(uint8_t mac_addr[MAC_ADDR_SIZE]);
 
-// eth_type_t get_eth_type(uint16_t eth_type);
-// void print_eth_type(uint16_t eth_type);
+void print_eth_type(uint16_t eth_type);
 // const char *eth_type_str(uint64_t eth_type);
 
 // const char *cast_type(uint8_t cast_type);
