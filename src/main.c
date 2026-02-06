@@ -30,12 +30,8 @@ int main(void)
             if (packet->data && packet->size > 1)
             {
                 memcpy(&meta_data, packet->data, sizeof(meta_data_t));
-                for (uint8_t i = 0; i < MAC_ADDR_SIZE; i++)
-                    printf("%x:", meta_data.mac_dst[i]);
-                printf("\n");
-                for (uint8_t i = 0; i < MAC_ADDR_SIZE; i++)
-                    printf("%x:", meta_data.mac_src[i]);
-                printf("\n");
+                print_mac_addr(meta_data.mac_dst);
+                print_mac_addr(meta_data.mac_src);
                 printf("%x\n", htons(meta_data.eth_type));
             }
             delete_raw_packet(packet);

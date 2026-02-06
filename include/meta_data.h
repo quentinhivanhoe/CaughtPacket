@@ -16,8 +16,8 @@
         ARP = 0x86DD
     } eth_type_t;
 
-// void print_mac_addr(uint8_t mac_addr[MAC_ADDR_SIZE]);
-// const char *mac_addr_str(uint8_t mac_addr[MAC_ADDR_SIZE]);
+void print_mac_addr(uint8_t mac_addr[MAC_ADDR_SIZE]);
+// char *mac_addr_str(uint8_t mac_addr[MAC_ADDR_SIZE]);
 
 // eth_type_t get_eth_type(uint16_t eth_type);
 // void print_eth_type(uint16_t eth_type);
